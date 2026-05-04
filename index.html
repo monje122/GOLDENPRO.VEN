@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOLDEN PRO & EMPRENDE.VENE | Inicio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Puedes enlazar íconos de Font Awesome aquí si quieres -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<base target="_blank">
 </head>
 <body>
 
@@ -19,7 +19,9 @@
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#productos">Productos</a></li>
                 <li><a href="#mis-webs">Mis Webs</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -46,13 +48,119 @@
                     <h3>Nuestra Visión</h3>
                     <p>Ser la empresa líder en desarrollo de plataformas de entretenimiento digital en Latinoamérica, reconocida por nuestra innovación en soluciones de bingo online y rifas virtuales.</p>
                 </div>
-                <!-- Puedes agregar una imagen aquí -->
-                <!-- <div class="about-image">
-                    <img src="tu-imagen.jpg" alt="Equipo de MiEmpresa">
-                </div> -->
             </div>
         </div>
     </section>
+
+    <!-- ========== NUEVA SECCIÓN: PRODUCTOS ========== -->
+    <section id="productos" class="products">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <p class="products-intro">Haz clic en cualquier producto para ver más información, ver el video demostrativo y comprar vía WhatsApp.</p>
+
+            <div class="products-grid">
+
+                <!-- Producto 1: Plataforma Bingo Online -->
+                <div class="product-card" onclick="openProductModal(0)">
+                    <div class="product-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Plataforma Bingo Online Completa</h3>
+                    <p class="product-price">Desde $450 USD</p>
+                    <p class="product-short">Sistema completo de bingo en vivo con cartones digitales, panel de administración y transmisión en tiempo real.</p>
+                    <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Producto 2: Sistema de Rifas -->
+                <div class="product-card" onclick="openProductModal(1)">
+                    <div class="product-image">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Sistema de Rifas Digitales</h3>
+                    <p class="product-price">Desde $350 USD</p>
+                    <p class="product-short">Gestión completa de rifas con venta de cupones online, sorteo automático y notificaciones vía WhatsApp.</p>
+                    <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Producto 3: App Móvil Bingo -->
+                <div class="product-card" onclick="openProductModal(2)">
+                    <div class="product-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>App Móvil para Bingo</h3>
+                    <p class="product-price">Desde $550 USD</p>
+                    <p class="product-short">Aplicación móvil personalizada para iOS y Android con compra de cartones, billetera digital y notificaciones push.</p>
+                    <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Producto 4: POS Bingo -->
+                <div class="product-card" onclick="openProductModal(3)">
+                    <div class="product-image">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <h3>Sistema POS para Bingo</h3>
+                    <p class="product-price">Desde $280 USD</p>
+                    <p class="product-short">Punto de venta integrado para vender cartones físicos y digitales con impresión de recibos y código QR.</p>
+                    <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Producto 5: Web Personalizada -->
+                <div class="product-card" onclick="openProductModal(4)">
+                    <div class="product-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Página Web Personalizada</h3>
+                    <p class="product-price">Desde $200 USD</p>
+                    <p class="product-short">Diseño web profesional para tu marca de bingo o rifas, optimizada para móviles y con integración de pagos.</p>
+                    <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Producto 6: Soporte Técnico -->
+                <div class="product-card" onclick="openProductModal(5)">
+                    <div class="product-image">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte Técnico Mensual</h3>
+                    <p class="product-price">$80 USD/mes</p>
+                    <p class="product-short">Mantenimiento, actualizaciones y soporte técnico 24/7 para tu plataforma de bingo o rifas.</p>
+                    <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Producto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-info">
+                    <h2 id="modalTitle">Título del Producto</h2>
+                    <p class="modal-price" id="modalPrice">$0 USD</p>
+                    <div class="modal-description" id="modalDescription">
+                        <!-- Descripción dinámica -->
+                    </div>
+
+                    <h4><i class="fas fa-check-circle"></i> Características Principales:</h4>
+                    <ul class="features-list" id="modalFeatures">
+                        <!-- Features dinámicos -->
+                    </ul>
+
+                    <a id="modalWhatsApp" href="#" class="btn-whatsapp-buy" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+                    </a>
+                    <p class="whatsapp-note">Te enviaremos toda la información de pago y activación.</p>
+                </div>
+                <div class="modal-video">
+                    <h4><i class="fas fa-play-circle"></i> Video Demostrativo</h4>
+                    <div class="video-container">
+                        <iframe id="modalVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Sección Mis Webs -->
     <section id="mis-webs" class="webs">
@@ -60,58 +168,161 @@
             <h2>Nuestros Sitios Web</h2>
             <p class="webs-intro">Explora los diferentes proyectos y servicios que ofrecemos a través de nuestras páginas web especializadas.</p>
             <div class="webs-grid">
-                <!-- Tarjeta 1 -->
                 <div class="web-card">
                     <h3>Bingo ANDINO 75</h3>
                     <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
                     <a href="https://bingoandino75.com/" target="_blank" class="btn-link">Ver Pagina</a>
                 </div>
-                <!-- Tarjeta 2 -->
                 <div class="web-card">
                     <h3>Bingo Binblack19</h3>
                     <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
                     <a href="https://binblack19.online/" target="_blank" class="btn-link">Ver Pagina</a>
                 </div>
-                    <!-- Tarjeta 7 -->
-              <div class="web-card">
+                <div class="web-card">
                     <h3>Rifas El Cupon De La Fortuna</h3>
-                    <p>
-Plataforma de rifas en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
+                    <p>Plataforma de rifas en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
                     <a href="https://elcupondelafortuna.online/" target="_blank" class="btn-link">Ver Pagina</a>
                 </div>
-                <!-- Tarjeta 3 -->
                 <div class="web-card">
                     <h3>Bingo Digital2024</h3>
-                    <p>
-Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
+                    <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
                     <a href="https://www.bingodigital2024.com/" target="_blank" class="btn-link">Ver Pagina</a>
                 </div>
-                 <!-- Tarjeta 5 -->
-              <div class="web-card">
+                <div class="web-card">
                     <h3>Bingo Virtual El Boom</h3>
-                    <p>
-Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
+                    <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
                     <a href="https://bingovirtualelboom.com/" target="_blank" class="btn-link">Ver Pagina</a>
                 </div>
-              <!-- Tarjeta 4 -->
-              <div class="web-card">
+                <div class="web-card">
                     <h3>Bingo Ganga</h3>
-                    <p>
-Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
+                    <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
                     <a href="https://www.bingoganga.com/" target="_blank" class="btn-link">Ver Pagina</a>
                 </div>
-             
-              
-               <!-- Tarjeta 6 -->
-              <div class="web-card">
+                <div class="web-card">
                     <h3>Rifas El Boom </h3>
-                    <p>
-Plataforma de rifas en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
+                    <p>Plataforma de rifas en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
                     <a href="https://www.rifaselboom.com/" target="_blank" class="btn-link">Ver Pagina</a>
                 </div>
-              
-          
-                <!-- Añade más tarjetas según necesites -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NUEVA SECCIÓN: TESTIMONIOS ========== -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2>Testimonios de Clientes</h2>
+            <p class="testimonials-intro">Lo que nuestros clientes dicen sobre nuestros productos y servicios.</p>
+
+            <div class="testimonials-grid">
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"La plataforma de bingo que me desarrollaron superó todas mis expectativas. Mis jugadores están encantados con la experiencia digital. Las ventas de cartones aumentaron un 300% en el primer mes."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Carlos M.</h4>
+                            <p>Dueño de Bingo Virtual El Boom</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"El sistema de rifas es increíblemente fácil de usar. Puedo gestionar miles de cupones sin problemas y los sorteos automáticos son totalmente transparentes. El soporte técnico siempre responde rápido."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>María G.</h4>
+                            <p>Fundadora de Rifas El Cupón de la Fortuna</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Golden Pro me creó una página web profesional que me ha ayudado a llegar a muchos más clientes. La integración con WhatsApp para las compras es genial, mis clientes adoran la facilidad."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Luis R.</h4>
+                            <p>Administrador de Bingo Digital 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Llevaba años buscando una solución confiable para mi bingo y finalmente la encontré. El sistema es estable, seguro y los jugadores pueden jugar desde cualquier dispositivo. Totalmente recomendado."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Ana P.</h4>
+                            <p>Propietaria de Bingo Ganga</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"El soporte técnico mensual vale cada centavo. Cualquier problema que surge lo resuelven en minutos. Mi negocio nunca ha estado tan bien gestionado como ahora con Golden Pro."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Pedro J.</h4>
+                            <p>Operador de Bingo Andino 75</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Desde que implementé el sistema POS para bingo, el proceso de venta de cartones es mucho más rápido. Los códigos QR son una maravilla y los jugadores pueden verificar sus cartones al instante."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Diana S.</h4>
+                            <p>Gerente de Rifas El Boom</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -122,7 +333,7 @@ Plataforma de rifas en línea para Venezuela. Juegos, sorteos y diversión desde
             <h2>Contacto</h2>
             <p>¿Tienes alguna pregunta? No dudes en ponerte en contacto con nosotros.</p>
             <div class="contact-info">
-                <p><strong>Email:</strong> goldenpro.ven@gmail.com.com</p>
+                <p><strong>Email:</strong> goldenpro.ven@gmail.com</p>
                 <div style="margin-top: 2rem;">
                 <a href="https://wa.me/584123714136?text=Hola,%20me%20interesa%20sus%20servicios" 
                    class="btn" 
@@ -141,6 +352,176 @@ Plataforma de rifas en línea para Venezuela. Juegos, sorteos y diversión desde
             <p>&copy; 2023 Goldenpro.ven & Emprende.vene. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/584123714136?text=Hola,%20me%20interesa%20sus%20servicios" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener"
+       title="Escríbenos por WhatsApp">
+       <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript para el Modal de Productos -->
+    <script>
+        // Datos de los productos
+        const productsData = [
+            {
+                title: "Plataforma Bingo Online Completa",
+                price: "$450 USD",
+                description: "Sistema profesional de bingo en vivo diseñado para operadores que buscan una solución completa y escalable. Incluye panel de administración web, venta de cartones online, transmisión en tiempo real y reportes detallados.",
+                features: [
+                    "Panel de administración completo",
+                    "Venta de cartones online con pagos integrados",
+                    "Transmisión en vivo de bolas cantadas",
+                    "Soporte para múltiples salas de juego",
+                    "Reportes de ventas y estadísticas",
+                    "Sistema de premios automáticos",
+                    "Compatible con todos los dispositivos",
+                    "Instalación y configuración incluida"
+                ],
+                video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20Plataforma%20Bingo%20Online%20Completa%20por%20$450%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+            },
+            {
+                title: "Sistema de Rifas Digitales",
+                price: "$350 USD",
+                description: "Plataforma completa para gestionar rifas y sorteos online. Permite la venta automática de cupones, sorteo aleatorio con certificación de transparencia y notificaciones automáticas a los ganadores.",
+                features: [
+                    "Venta de cupones numerados online",
+                    "Sorteo automático con certificación",
+                    "Notificaciones vía WhatsApp y email",
+                    "Panel de control para administradores",
+                    "Múltiples sorteos simultáneos",
+                    "Integración con redes sociales",
+                    "Reportes de participación",
+                    "Diseño responsive para móviles"
+                ],
+                video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20el%20Sistema%20de%20Rifas%20Digitales%20por%20$350%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+            },
+            {
+                title: "App Móvil para Bingo",
+                price: "$550 USD",
+                description: "Aplicación móvil nativa para iOS y Android que permite a tus jugadores comprar cartones, jugar en tiempo real, recibir notificaciones y gestionar su billetera digital desde su celular.",
+                features: [
+                    "App nativa para iOS y Android",
+                    "Compra de cartones con un clic",
+                    "Billetera digital integrada",
+                    "Notificaciones push en tiempo real",
+                    "Historial de juegos y ganancias",
+                    "Chat en vivo con soporte",
+                    "Modo offline para consultas",
+                    "Publicación en App Store y Play Store"
+                ],
+                video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20App%20Móvil%20para%20Bingo%20por%20$550%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+            },
+            {
+                title: "Sistema POS para Bingo",
+                price: "$280 USD",
+                description: "Sistema de punto de venta especializado para bingos físicos. Permite vender cartones, imprimir recibos con código QR, escanear cartones ganadores y sincronizar todo con la plataforma online.",
+                features: [
+                    "Interfaz táctil intuitiva",
+                    "Impresión de recibos con QR",
+                    "Escaneo de cartones ganadores",
+                    "Sincronización con plataforma online",
+                    "Múltiples cajas simultáneas",
+                    "Cierre de caja automático",
+                    "Compatible con lectores RFID/NFC",
+                    "Respaldo en la nube"
+                ],
+                video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20el%20Sistema%20POS%20para%20Bingo%20por%20$280%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+            },
+            {
+                title: "Página Web Personalizada",
+                price: "$200 USD",
+                description: "Diseño web profesional y personalizado para tu marca de bingo o rifas. Incluye diseño responsive, optimización SEO, integración con redes sociales y formularios de contacto conectados a WhatsApp.",
+                features: [
+                    "Diseño único y personalizado",
+                    "100% responsive (móvil, tablet, PC)",
+                    "Optimización SEO básica",
+                    "Integración con WhatsApp Business",
+                    "Formularios de contacto",
+                    "Galería de imágenes",
+                    "Enlaces a redes sociales",
+                    "Hosting y dominio por 1 año"
+                ],
+                video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20Página%20Web%20Personalizada%20por%20$200%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+            },
+            {
+                title: "Soporte Técnico Mensual",
+                price: "$80 USD/mes",
+                description: "Plan de soporte técnico premium que incluye mantenimiento preventivo, actualizaciones de seguridad, respaldo diario de datos, atención 24/7 y desarrollo de nuevas funcionalidades bajo demanda.",
+                features: [
+                    "Soporte técnico 24/7",
+                    "Actualizaciones de seguridad",
+                    "Respaldo diario automático",
+                    "Monitoreo de servidor",
+                    "Corrección de bugs sin costo extra",
+                    "1 hora de desarrollo mensual",
+                    "Reporte mensual de rendimiento",
+                    "Asesoría técnica personalizada"
+                ],
+                video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20contratar%20el%20Soporte%20Técnico%20Mensual%20por%20$80%20USD/mes.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+            }
+        ];
+
+        // Función para abrir el modal
+        function openProductModal(index) {
+            const product = productsData[index];
+            const modal = document.getElementById('productModal');
+
+            document.getElementById('modalTitle').textContent = product.title;
+            document.getElementById('modalPrice').textContent = product.price;
+            document.getElementById('modalDescription').innerHTML = `<p>${product.description}</p>`;
+
+            // Generar lista de features
+            const featuresList = document.getElementById('modalFeatures');
+            featuresList.innerHTML = '';
+            product.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
+                featuresList.appendChild(li);
+            });
+
+            // Configurar video
+            document.getElementById('modalVideo').src = product.video;
+
+            // Configurar botón de WhatsApp con mensaje predefinido
+            const whatsappLink = `https://wa.me/584123714136?text=${product.whatsappMsg}`;
+            document.getElementById('modalWhatsApp').href = whatsappLink;
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Función para cerrar el modal
+        function closeProductModal() {
+            const modal = document.getElementById('productModal');
+            modal.style.display = 'none';
+            document.getElementById('modalVideo').src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar modal al hacer clic fuera del contenido
+        window.onclick = function(event) {
+            const modal = document.getElementById('productModal');
+            if (event.target === modal) {
+                closeProductModal();
+            }
+        }
+
+        // Cerrar modal con la tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeProductModal();
+            }
+        });
+    </script>
 
 </body>
 </html>
