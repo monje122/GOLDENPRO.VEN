@@ -152,6 +152,10 @@
                     </a>
                     <p class="whatsapp-note">Te enviaremos toda la información de pago y activación.</p>
                 </div>
+              <a id="modalCuotas" href="#" class="btn-cuotas" target="_blank" rel="noopener">
+    💳 Pagar en cuotas
+    <span>Inicial de $150 USD de $500</span>
+</a>
                 <div class="modal-video">
                     <h4><i class="fas fa-play-circle"></i> Video Demostrativo</h4>
                     <div class="video-container">
@@ -369,17 +373,23 @@
             {
                 title: "Plataforma Bingo Online Completa",
                 price: "$450 USD",
-                description: "Sistema profesional de bingo en vivo diseñado para operadores que buscan una solución completa y escalable. Incluye panel de administración web, venta de cartones online, transmisión en tiempo real y reportes detallados.",
+                description: "Sistema profesional de bingo en vivo diseñado para operadores que buscan una solución completa y escalable. Incluye panel de administración web, venta de cartones online, transmisión en tiempo real por youtube. Se entrega en 3 dias habiles, despues del pago",
                 features: [
                     "Panel de administración completo",
                     "Venta de cartones online con pagos integrados",
                     "Transmisión en vivo de bolas cantadas",
-                    "Soporte para múltiples salas de juego",
+                    "Soporte para la sala de juego por 1 mes",
                     "Reportes de ventas y estadísticas",
                     "Sistema de premios automáticos",
                     "Compatible con todos los dispositivos",
-                    "Instalación y configuración incluida"
+                    "Instalación y configuración incluida"                                              
                 ],
+              
+               bonus: [
+                    "1 mes de soporte gratis",
+                    "1 año de dominio gratis",
+                    "Sistema de bingo Excel detecta ganador automáticamente"
+    ],
                 video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
                 whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20Plataforma%20Bingo%20Online%20Completa%20por%20$450%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             },
@@ -485,8 +495,27 @@
             product.features.forEach(feature => {
                 const li = document.createElement('li');
                 li.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
-                featuresList.appendChild(li);
+                featuresList.appendChild(li);      
             });
+          if (product.bonus) {
+
+    const bonusDiv = document.createElement('div');
+
+    bonusDiv.className = 'bonus-box';
+
+    bonusDiv.innerHTML = `
+        <h4>🎁 Te obsequiamos</h4>
+
+        <ul>
+            ${product.bonus.map(item => `
+                <li>${item}</li>
+            `).join('')}
+        </ul>
+    `;
+
+    document.getElementById('modalDescription')
+        .appendChild(bonusDiv);
+}
 
             // Configurar video
             document.getElementById('modalVideo').src = product.video;
@@ -494,6 +523,11 @@
             // Configurar botón de WhatsApp con mensaje predefinido
             const whatsappLink = `https://wa.me/584123714136?text=${product.whatsappMsg}`;
             document.getElementById('modalWhatsApp').href = whatsappLink;
+          
+          const cuotasLink =
+`https://wa.me/584123714136?text=Hola,%20quiero%20comprar%20${product.title}%20pagando%20en%20cuotas%20con%20$150%20USD%20de%20inicial%20pagaria%20$500%20USD%20en%20total%20al%20BCV.`;
+
+document.getElementById('modalCuotas').href = cuotasLink;
 
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
