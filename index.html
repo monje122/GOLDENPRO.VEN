@@ -72,7 +72,7 @@
                 </div>
 
                 <!-- Producto 7: Soporte Técnico -->
-                <div class="product-card" onclick="openProductModal(6)">
+                <div class="product-card" onclick="openProductModal(5)">
                     <div class="product-image">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -83,7 +83,7 @@
                 </div>
               
               <!-- Producto 3: App Móvil Bingo -->
-                <div class="product-card" onclick="openProductModal(2)">
+                <div class="product-card" onclick="openProductModal(1)">
                     <div class="product-image">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -92,21 +92,10 @@
                     <p class="product-short">Sistema profesional de bingo automatizado diseñado para operadores que buscan una solución completa.</p>
                     <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
-                <!-- Producto 2: Sistema de Rifas -->
-                <div class="product-card" onclick="openProductModal(1)">
-                    <div class="product-image">
-                        <i class="fas fa-ticket-alt"></i>
-                    </div>
-                    <h3>Sistema de Rifas Digitales</h3>
-                    <p class="product-price">Desde $350 USD</p>
-                    <p class="product-short">Gestión completa de rifas con venta de cupones online, sorteo automático y notificaciones vía WhatsApp.</p>
-                    <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
-                </div>
-
-                
+             
 
                 <!-- Producto 5: Web Personalizada -->
-                <div class="product-card" onclick="openProductModal(3)">
+                <div class="product-card" onclick="openProductModal(2)">
                     <div class="product-image">
                         <i class="fas fa-globe"></i>
                     </div>
@@ -116,7 +105,7 @@
                     <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
               <!-- Producto 3: App Móvil Bingo -->
-                <div class="product-card" onclick="openProductModal(4)">
+                <div class="product-card" onclick="openProductModal(3)">
                     <div class="product-image">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -127,7 +116,7 @@
                 </div>
 
                 <!-- Producto 6: Soporte Técnico -->
-                <div class="product-card" onclick="openProductModal(5)">
+                <div class="product-card" onclick="openProductModal(4)">
                     <div class="product-image">
                         <i class="fas fa-headset"></i>
                     </div>
@@ -404,24 +393,10 @@
                     "1 año de dominio gratis",
                     "Sistema de bingo Excel detecta ganador automáticamente"
     ],
-                video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+                video: "https://www.youtube.com/embed/rwZIsCajI3o",
                 whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20Plataforma%20Bingo%20Online%20Completa%20por%20$450%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             },
-            {
-                title: "Sistema de Rifas Digitales",
-                price: "$350 USD",
-                description: "Plataforma completa para gestionar rifas y sorteos online. Permite la venta automática de cupones, sorteo aleatorio con transparencia y notificaciones automáticas a los compradores.",
-                features: [
-                    "Venta de cupones numerados online",
-                    "Sorteo automático ",
-                    "Notificaciones vía  email",
-                    "Panel de control para administradores", 
-                    "Integración con redes sociales",
-                    "Diseño responsive para móviles"
-                ],
-                video: "https://www.youtube.com/embed/MELiNoIEMV8",
-                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20el%20Sistema%20de%20Rifas%20Digitales%20por%20$350%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
-            },
+            
             {
                 title: "pagina web de Bingo automatica completa",
                 price: "$950 USD",
@@ -496,10 +471,10 @@ features: [
                     "Reporte mensual de rendimiento",
                     "Asesoría técnica personalizada"
                 ],
-                video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+               video: "",
                 whatsappMsg: "Hola,%20estoy%20interesado%20en%20contratar%20el%20Soporte%20Técnico%20Mensual%20por%20$80%20USD/mes.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             },
-          {
+            {
                 title: "Pagina de bingo de venta basica",
                 price: "$200 USD/mes",
                description: "Plataforma web para inscripción y venta de cartones de bingo online. Permite registrar jugadores, seleccionar cartones disponibles, cargar comprobantes de pago, guardar inscripciones en Supabase y enviar los datos por WhatsApp.",
@@ -563,7 +538,20 @@ features: [
 }
 
             // Configurar video
-            document.getElementById('modalVideo').src = product.video;
+            const videoContainer = document.querySelector('.modal-video');
+
+if(product.video){
+
+    videoContainer.style.display = 'block';
+
+    document.getElementById('modalVideo').src = product.video;
+
+}else{
+
+    videoContainer.style.display = 'none';
+
+    document.getElementById('modalVideo').src = '';
+}
 
             // Configurar botón de WhatsApp con mensaje predefinido
             const whatsappLink = `https://wa.me/584123714136?text=${product.whatsappMsg}`;
