@@ -87,20 +87,9 @@
                     <div class="product-image">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>App Móvil para Bingo</h3>
-                    <p class="product-price">Desde $550 USD</p>
+                    <h3>Pagina web de bingo automatica completa </h3>
+                    <p class="product-price">Desde $950 USD</p>
                     <p class="product-short">Aplicación móvil personalizada para iOS y Android con compra de cartones, billetera digital y notificaciones push.</p>
-                    <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
-                </div>
-
-                <!-- Producto 4: POS Bingo -->
-                <div class="product-card" onclick="openProductModal(3)">
-                    <div class="product-image">
-                        <i class="fas fa-cash-register"></i>
-                    </div>
-                    <h3>Sistema POS para Bingo</h3>
-                    <p class="product-price">Desde $280 USD</p>
-                    <p class="product-short">Punto de venta integrado para vender cartones físicos y digitales con impresión de recibos y código QR.</p>
                     <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
 
@@ -382,6 +371,7 @@
                     "Reportes de ventas y estadísticas",
                     "Sistema de premios automáticos",
                     "Compatible con todos los dispositivos",
+                    "Diseño responsive para móviles",
                     "Instalación y configuración incluida"                                              
                 ],
               
@@ -396,33 +386,29 @@
             {
                 title: "Sistema de Rifas Digitales",
                 price: "$350 USD",
-                description: "Plataforma completa para gestionar rifas y sorteos online. Permite la venta automática de cupones, sorteo aleatorio con certificación de transparencia y notificaciones automáticas a los ganadores.",
+                description: "Plataforma completa para gestionar rifas y sorteos online. Permite la venta automática de cupones, sorteo aleatorio con transparencia y notificaciones automáticas a los compradores.",
                 features: [
                     "Venta de cupones numerados online",
-                    "Sorteo automático con certificación",
-                    "Notificaciones vía WhatsApp y email",
-                    "Panel de control para administradores",
-                    "Múltiples sorteos simultáneos",
+                    "Sorteo automático ",
+                    "Notificaciones vía  email",
+                    "Panel de control para administradores", 
                     "Integración con redes sociales",
-                    "Reportes de participación",
                     "Diseño responsive para móviles"
                 ],
                 video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
                 whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20el%20Sistema%20de%20Rifas%20Digitales%20por%20$350%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             },
             {
-                title: "App Móvil para Bingo",
-                price: "$550 USD",
-                description: "Aplicación móvil nativa para iOS y Android que permite a tus jugadores comprar cartones, jugar en tiempo real, recibir notificaciones y gestionar su billetera digital desde su celular.",
+                title: "pagina web de Bingo automatica completa",
+                price: "$950 USD",
+                description: "Sistema profesional de bingo automatizado diseñado para operadores que buscan una solución completa, segura y escalable. Incluye panel de administración web, venta de cartones online con verificación de pagos, sala de juego en tiempo real con marcado automático y detección de ganadores. Se entrega listo para operar en 5 días hábiles después del pago.",
                 features: [
-                    "App nativa para iOS y Android",
-                    "Compra de cartones con un clic",
-                    "Billetera digital integrada",
-                    "Notificaciones push en tiempo real",
-                    "Historial de juegos y ganancias",
-                    "Chat en vivo con soporte",
-                    "Modo offline para consultas",
-                    "Publicación en App Store y Play Store"
+                    "Login seguro para administradores",
+"Control total del juego: iniciar, sacar bolas, modo automático, finalizar",
+"Visualización de bola actual con animaciones",
+"Contador de jugadores en sala en tiempo real",
+"Gestión de compras pendientes con aprobación/rechazo",
+"Creación y gestión de promociones de cartones"
                 ],
                 video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
                 whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20App%20Móvil%20para%20Bingo%20por%20$550%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
@@ -523,11 +509,22 @@
             // Configurar botón de WhatsApp con mensaje predefinido
             const whatsappLink = `https://wa.me/584123714136?text=${product.whatsappMsg}`;
             document.getElementById('modalWhatsApp').href = whatsappLink;
-          
-          const cuotasLink =
-`https://wa.me/584123714136?text=Hola,%20quiero%20comprar%20${product.title}%20pagando%20en%20cuotas%20con%20$150%20USD%20de%20inicial%20pagaria%20$500%20USD%20en%20total%20al%20BCV.`;
+          const cuotasBtn = document.getElementById('modalCuotas');
 
-document.getElementById('modalCuotas').href = cuotasLink;
+if(index === 0){
+
+    cuotasBtn.style.display = 'flex';
+
+    const cuotasLink =
+    `https://wa.me/584123714136?text=Hola,%20quiero%20comprar%20${product.title}%20pagando%20en%20cuotas%20con%20$150%20USD%20de%20inicial%20pagaria%20$500%20USD%20en%20total%20al%20BCV.`;
+
+    cuotasBtn.href = cuotasLink;
+
+}else{
+
+    cuotasBtn.style.display = 'none';
+}
+          
 
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
