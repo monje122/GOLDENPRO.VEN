@@ -772,3 +772,33 @@ footer {
 .btn-cuotas:hover{
     transform:translateY(-3px);
 }
+.badge-inicial{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:#ff6b00;
+    color:white;
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:0.85em;
+    font-weight:800;
+    box-shadow:0 8px 20px rgba(255,107,0,0.4);
+    z-index:5;
+    animation:pulseBadge 2s infinite;
+}
+
+.product-card{
+    position:relative;
+}
+
+@keyframes pulseBadge{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.06);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
