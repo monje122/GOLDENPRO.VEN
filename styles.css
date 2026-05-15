@@ -802,3 +802,18 @@ footer {
         transform:scale(1);
     }
 }
+}
+.nav-logo{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:0px;
+}
+
+.nav-logo img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+     margin-top:-50x;
+}
