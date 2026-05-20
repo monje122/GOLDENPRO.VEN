@@ -3,47 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1200004005127223');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1200004005127223&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1200004005127223');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1200004005127223&ev=PageView&noscript=1"
+    /></noscript>
     <title>GOLDEN PRO.VENE | Inicio</title>
-    <link rel="icon"
-      type="image/png"
-      href="https://okwkwgrecwxydjcezcdn.supabase.co/storage/v1/object/public/VIDEOS%20GOLDEN/photo_2026-05-07_jpg.jpg">
-    <link rel="apple-touch-icon"
-      href="https://okwkwgrecwxydjcezcdn.supabase.co/storage/v1/object/public/VIDEOS%20GOLDEN/photo_2026-05-07_jpg.jpg">
+    <link rel="icon" type="image/png" href="https://okwkwgrecwxydjcezcdn.supabase.co/storage/v1/object/public/VIDEOS%20GOLDEN/photo_2026-05-07_jpg.jpg">
+    <link rel="apple-touch-icon" href="https://okwkwgrecwxydjcezcdn.supabase.co/storage/v1/object/public/VIDEOS%20GOLDEN/photo_2026-05-07_jpg.jpg">
     <meta name="theme-color" content="#0f172a">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<base target="_self">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f0d878;
+            --gold-dark: #b8941f;
+            --dark: #0a0a0f;
+            --dark-secondary: #12121a;
+            --dark-card: #1a1a2e;
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6b6b7b;
+            --whatsapp: #25d366;
+            --whatsapp-dark: #128c7e;
+            --gradient-gold: linear-gradient(135deg, #d4af37, #f0d878, #d4af37);
+            --gradient-dark: linear-gradient(135deg, #0a0a0f, #1a1a2e);
+            --glass-bg: rgba(26, 26, 46, 0.7);
+            --glass-border: rgba(212, 175, 55, 0.15);
+            --shadow-gold: 0 0 40px rgba(212, 175, 55, 0.15);
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--dark); }
+        ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+        .particles {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 0; overflow: hidden;
+        }
+        .particle {
+            position: absolute; width: 4px; height: 4px;
+            background: var(--gold); border-radius: 50%; opacity: 0.3;
+            animation: float 15s infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 0.3; } 90% { opacity: 0.3; }
+            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+        }
+
+        header {
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            transition: var(--transition);
+        }
+        header.scrolled {
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2rem; max-width: 1400px; margin: 0 auto;
+        }
+        .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+        .nav-logo img {
+            width: 42px; height: 42px; border-radius: 12px; object-fit: cover;
+            border: 2px solid var(--gold); box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .nav-logo h2 {
+            font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 700;
+            background: var(--gradient-gold); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-secondary); font-weight: 500;
+            font-size: 0.9rem; position: relative; transition: var(--transition); padding: 0.5rem 0;
+        }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+            background: var(--gradient-gold); transition: width 0.3s ease;
+        }
+        .nav-links a:hover { color: var(--gold-light); }
+        .nav-links a:hover::after { width: 100%; }
+        .mobile-menu-btn {
+            display: none; background: none; border: none; color: var(--gold);
+            font-size: 1.5rem; cursor: pointer;
+        }
+
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; position: relative; background: var(--gradient-dark); overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 2rem; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(212, 175, 55, 0.1); border: 1px solid var(--glass-border);
+            padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.85rem;
+            color: var(--gold-light); margin-bottom: 2rem; animation: fadeInUp 0.8s ease;
+        }
+        .hero-content h1 {
+            font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        .hero-content h1 span {
+            background: var(--gradient-gold); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero-content p {
+            font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2.5rem;
+            max-width: 600px; margin-left: auto; margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        .hero-buttons {
+            display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 1rem 2rem; border-radius: 12px; font-weight: 600;
+            font-size: 0.95rem; text-decoration: none; transition: var(--transition);
+            cursor: pointer; border: none; position: relative; overflow: hidden;
+        }
+        .btn-primary {
+            background: var(--gradient-gold); color: var(--dark);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5); }
+        .btn-outline {
+            background: transparent; color: var(--gold-light); border: 2px solid var(--gold-dark);
+        }
+        .btn-outline:hover { background: rgba(212, 175, 55, 0.1); transform: translateY(-2px); }
+        .btn-whatsapp {
+            background: var(--whatsapp); color: white;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+        }
+        .btn-whatsapp:hover { background: var(--whatsapp-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5); }
+
+        section { padding: 6rem 0; position: relative; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700; margin-bottom: 1rem;
+            background: var(--gradient-gold); -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .section-header p { color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+        .about { background: var(--dark-secondary); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-visual { position: relative; }
+        .about-visual::before {
+            content: ''; position: absolute; top: -20px; left: -20px;
+            width: 100%; height: 100%; border: 2px solid var(--gold-dark);
+            border-radius: 20px; opacity: 0.3;
+        }
+        .about-visual-inner {
+            background: var(--dark-card); border-radius: 20px; padding: 3rem;
+            border: 1px solid var(--glass-border); position: relative;
+        }
+        .about-visual-inner i { font-size: 3rem; color: var(--gold); margin-bottom: 1.5rem; }
+        .about-visual-inner h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--gold-light); }
+        .about-text h3 {
+            font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem;
+            color: var(--gold-light); margin-bottom: 1rem; margin-top: 2rem;
+        }
+        .about-text h3:first-child { margin-top: 0; }
+        .about-text p { color: var(--text-secondary); line-height: 1.8; }
+
+        .products { background: var(--dark); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .product-card {
+            background: var(--glass-bg); backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border); border-radius: 20px;
+            padding: 2rem; position: relative; overflow: hidden;
+            transition: var(--transition); cursor: pointer;
+        }
+        .product-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+            background: var(--gradient-gold); transform: scaleX(0); transition: transform 0.4s ease;
+        }
+        .product-card:hover::before { transform: scaleX(1); }
+        .product-card:hover {
+            transform: translateY(-8px); border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: var(--shadow-gold);
+        }
+        .badge-inicial {
+            position: absolute; top: 15px; right: 15px;
+            background: linear-gradient(135deg, #ff6b00, #ff8c00); color: white;
+            padding: 6px 14px; border-radius: 30px; font-size: 0.8rem;
+            font-weight: 700; box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+            z-index: 5; animation: pulseBadge 2s infinite;
+        }
+        @keyframes pulseBadge { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .product-image {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.05));
+            border-radius: 16px; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.5rem; font-size: 1.8rem; color: var(--gold);
+            border: 1px solid var(--glass-border);
+        }
+        .product-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.5rem; }
+        .product-price { color: #4ade80; font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; }
+        .product-short { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; }
+        .btn-view {
+            display: inline-flex; align-items: center; gap: 0.5rem; background: transparent;
+            color: var(--gold); padding: 0.7rem 1.5rem; border: 1.5px solid var(--gold-dark);
+            border-radius: 10px; font-weight: 600; font-size: 0.9rem; transition: var(--transition);
+            cursor: pointer; width: 100%; justify-content: center;
+        }
+        .btn-view:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--gold); }
+
+        .modal {
+            display: none; position: fixed; z-index: 2000; left: 0; top: 0;
+            width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px); align-items: center; justify-content: center;
+            padding: 20px; animation: modalFadeIn 0.3s ease;
+        }
+        @keyframes modalFadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .modal-content {
+            background: var(--dark-card); border-radius: 24px; width: 100%; max-width: 900px;
+            max-height: 90vh; overflow-y: auto; position: relative;
+            border: 1px solid var(--glass-border); box-shadow: 0 25px 80px rgba(0,0,0,0.6);
+            animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        @keyframes modalSlideIn { from { opacity: 0; transform: translateY(40px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .close-modal {
+            position: absolute; top: 20px; right: 20px; width: 40px; height: 40px;
+            background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border);
+            border-radius: 12px; color: var(--text-secondary); font-size: 1.5rem;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            transition: var(--transition); z-index: 10;
+        }
+        .close-modal:hover { background: rgba(212, 175, 55, 0.1); color: var(--gold); border-color: var(--gold-dark); }
+        .modal-body { padding: 2.5rem; }
+        .modal-info h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; color: var(--gold-light); margin-bottom: 0.5rem; text-align: left; }
+        .modal-price { color: #4ade80; font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .modal-description p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; }
+        .bonus-box {
+            margin-top: 15px; padding: 20px; border-radius: 16px;
+            background: linear-gradient(135deg, rgba(255, 165, 0, 0.1), rgba(255, 107, 0, 0.05));
+            border: 1px solid rgba(255, 165, 0, 0.2);
+        }
+        .bonus-box h4 { color: #f9d949; margin-bottom: 12px; font-size: 1rem; }
+        .bonus-box ul { padding-left: 20px; }
+        .bonus-box li { margin-bottom: 8px; color: var(--text-primary); font-size: 0.9rem; }
+        .modal-info h4 { color: var(--gold-light); margin: 1.5rem 0 1rem; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .features-list { list-style: none; margin-bottom: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+        .features-list li { color: var(--text-secondary); padding: 0.4rem 0; display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+        .features-list li i { color: #4ade80; font-size: 0.8rem; }
+        .btn-whatsapp-buy {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            background: var(--whatsapp); color: white; padding: 1rem 2rem; border: none;
+            border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1rem;
+            transition: var(--transition); width: 100%; margin-bottom: 0.8rem;
+        }
+        .btn-whatsapp-buy:hover { background: var(--whatsapp-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4); }
+        .btn-cuotas {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 5px; padding: 16px; border-radius: 12px; text-decoration: none;
+            background: linear-gradient(135deg, #ff9800, #ff5722); color: white;
+            font-weight: 700; transition: var(--transition); width: 100%;
+        }
+        .btn-cuotas span { font-size: 0.85em; font-weight: 400; opacity: 0.9; }
+        .btn-cuotas:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255, 87, 34, 0.4); }
+        .whatsapp-note { color: var(--text-muted); font-size: 0.8rem; text-align: center; margin-top: 0.5rem; }
+        .modal-video { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--glass-border); }
+        .modal-video h4 { color: var(--gold-light); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; font-size: 1rem; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px; border: 1px solid var(--glass-border); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 16px; }
+
+        .webs { background: var(--dark-secondary); }
+        .webs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .web-card {
+            background: var(--glass-bg); backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border); border-radius: 20px;
+            padding: 2rem; text-align: center; transition: var(--transition);
+            position: relative; overflow: hidden;
+        }
+        .web-card::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), transparent);
+            opacity: 0; transition: opacity 0.4s ease;
+        }
+        .web-card:hover::after { opacity: 1; }
+        .web-card:hover { transform: translateY(-5px); border-color: rgba(212, 175, 55, 0.3); box-shadow: var(--shadow-gold); }
+        .web-card h3 { font-family: 'Space Grotesk', sans-serif; color: var(--gold-light); margin-bottom: 1rem; font-size: 1.2rem; position: relative; z-index: 1; }
+        .web-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; position: relative; z-index: 1; }
+        .btn-link {
+            display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold);
+            text-decoration: none; font-weight: 600; border: 1.5px solid var(--gold-dark);
+            padding: 0.7rem 1.5rem; border-radius: 10px; transition: var(--transition);
+            position: relative; z-index: 1;
+        }
+        .btn-link:hover { background: rgba(212, 175, 55, 0.1); border-color: var(--gold); }
+
+        .testimonials { background: var(--dark); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .testimonial-card {
+            background: var(--glass-bg); backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border); border-radius: 20px;
+            padding: 2rem; position: relative; transition: var(--transition);
+        }
+        .testimonial-card:hover { border-color: rgba(212, 175, 55, 0.3); transform: translateY(-5px); box-shadow: var(--shadow-gold); }
+        .testimonial-card::before {
+            content: '"'; position: absolute; top: 10px; left: 20px;
+            font-size: 5rem; color: var(--gold); opacity: 0.15;
+            font-family: Georgia, serif; line-height: 1;
+        }
+        .testimonial-stars { color: #ffc107; margin-bottom: 1rem; font-size: 0.9rem; }
+        .testimonial-text { color: var(--text-secondary); font-style: italic; line-height: 1.8; margin-bottom: 1.5rem; position: relative; z-index: 1; }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--glass-border); padding-top: 1rem; }
+        .author-avatar {
+            width: 48px; height: 48px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            color: var(--dark); font-size: 1.1rem;
+        }
+        .author-info h4 { color: var(--gold-light); font-size: 0.95rem; margin-bottom: 0.2rem; }
+        .author-info p { color: var(--text-muted); font-size: 0.8rem; }
+
+        .contact { background: var(--dark-secondary); text-align: center; }
+        .contact-box {
+            background: var(--glass-bg); backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border); border-radius: 24px;
+            padding: 3rem; max-width: 600px; margin: 0 auto;
+        }
+        .contact-box p { color: var(--text-secondary); margin-bottom: 0.5rem; }
+        .contact-box .btn { margin-top: 1.5rem; }
+
+        footer { background: var(--dark); text-align: center; padding: 3rem 0; border-top: 1px solid var(--glass-border); }
+        footer p { color: var(--text-muted); font-size: 0.9rem; }
+
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
+            background: var(--whatsapp); color: white; border-radius: 50%;
+            text-align: center; font-size: 28px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); z-index: 1000;
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none; transition: var(--transition);
+            border: 2px solid rgba(255,255,255,0.2); animation: pulse 2s infinite;
+        }
+        .whatsapp-float:hover { background: var(--whatsapp-dark); transform: scale(1.1); box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; position: absolute; top: 100%; left: 0; width: 100%;
+                background: rgba(10, 10, 15, 0.95); backdrop-filter: blur(20px);
+                flex-direction: column; padding: 2rem; gap: 1.5rem;
+                border-bottom: 1px solid var(--glass-border);
+            }
+            .nav-links.active { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .features-list { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 100%; max-width: 300px; justify-content: center; }
+        }
+    </style>
+
 </head>
 <body>
 
-    <!-- Barra de Navegación -->
-    <header>
+    <div class="particles" id="particles"></div>
+
+    <header id="header">
         <nav class="navbar">
             <div class="nav-logo">
+                <img src="https://okwkwgrecwxydjcezcdn.supabase.co/storage/v1/object/public/VIDEOS%20GOLDEN/photo_2026-05-07_jpg.jpg" alt="Logo">
                 <h2>GOLDEN PRIME.VENE</h2>
-                 <img src="https://okwkwgrecwxydjcezcdn.supabase.co/storage/v1/object/public/VIDEOS%20GOLDEN/photo_2026-05-07_jpg.jpg" alt="Logo">
-            
             </div>
-            <ul class="nav-links">
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#quienes-somos">Quienes Somos</a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#mis-webs">Mis Webs</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
@@ -52,140 +421,135 @@ src="https://www.facebook.com/tr?id=1200004005127223&ev=PageView&noscript=1"
         </nav>
     </header>
 
-    <!-- Sección Hero / Inicio -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1>Bienvenido Amigo Emprendedor  </h1>
-            <p>Soluciones innovadoras para tus necesidades.</p>
-            <a href="#quienes-somos" class="btn">Conócenos Más</a>
+            <div class="hero-badge">
+                <i class="fas fa-sparkles"></i>
+                Soluciones Digitales de Elite
+            </div>
+            <h1>Bienvenido <span>Amigo Emprendedor</span></h1>
+            <p>Soluciones innovadoras para tus necesidades. Especialistas en desarrollo de plataformas de bingo online, gestion de rifas y experiencias digitales unicas.</p>
+            <div class="hero-buttons">
+                <a href="#quienes-somos" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Conocenos Mas
+                </a>
+                <a href="https://wa.me/584123714136?text=Hola,%20me%20interesa%20sus%20servicios" class="btn btn-outline" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Contactanos
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Sección Quiénes Somos -->
     <section id="quienes-somos" class="about">
         <div class="container">
-            <h2>Quiénes Somos</h2>
-            <div class="about-content">
+            <div class="section-header">
+                <h2>Quienes Somos</h2>
+                <p>Un equipo apasionado por crear experiencias digitales unicas</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-visual-inner">
+                        <i class="fas fa-code"></i>
+                        <h3>Desarrollo de Excelencia</h3>
+                        <p style="color: var(--text-secondary);">Codigo limpio, funcionalidades avanzadas y disenos que impactan.</p>
+                    </div>
+                </div>
                 <div class="about-text">
-                    <p>Somos un equipo de programadores apasionados por crear experiencias digitales únicas. Especialistas en desarrollo de páginas para bingo online, gestión de rifas, y mucho más, siempre con código limpio y funcionalidades avanzadas.</p>
-                    <h3>Nuestra Misión</h3>
-                    <p>Proporcionar soluciones de programación personalizadas que permitan a nuestros clientes operar sus negocios de bingo y rifas con eficiencia, seguridad y las mejores funcionalidades del mercado digital.</p>
-                    <h3>Nuestra Visión</h3>
-                    <p>Ser la empresa líder en desarrollo de plataformas de entretenimiento digital en Latinoamérica, reconocida por nuestra innovación en soluciones de bingo online y rifas virtuales.</p>
+                    <p>Somos un equipo de programadores apasionados por crear experiencias digitales unicas. Especialistas en desarrollo de paginas para bingo online, gestion de rifas, y mucho mas, siempre con codigo limpio y funcionalidades avanzadas.</p>
+                    <h3><i class="fas fa-bullseye" style="color: var(--gold); margin-right: 0.5rem;"></i>Nuestra Mision</h3>
+                    <p>Proporcionar soluciones de programacion personalizadas que permitan a nuestros clientes operar sus negocios de bingo y rifas con eficiencia, seguridad y las mejores funcionalidades del mercado digital.</p>
+                    <h3><i class="fas fa-eye" style="color: var(--gold); margin-right: 0.5rem;"></i>Nuestra Vision</h3>
+                    <p>Ser la empresa lider en desarrollo de plataformas de entretenimiento digital en Latinoamerica, reconocida por nuestra innovacion en soluciones de bingo online y rifas virtuales.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== NUEVA SECCIÓN: PRODUCTOS ========== -->
     <section id="productos" class="products">
         <div class="container">
-            <h2>Nuestros Productos</h2>
-            <p class="products-intro">Haz clic en cualquier producto para ver más información, ver el video demostrativo y comprar vía WhatsApp.</p>
-
+            <div class="section-header">
+                <h2>Nuestros Productos</h2>
+                <p>Haz clic en cualquier producto para ver mas informacion, ver el video demostrativo y comprar via WhatsApp.</p>
+            </div>
             <div class="products-grid">
-                          
-                <!-- Producto 1: Plataforma Bingo Online -->
                 <div class="product-card" onclick="openProductModal(0)">
-                  <div class="badge-inicial">
-   🔥 Inicial $150
-</div>
+                    <div class="badge-inicial">🔥 Inicial $150</div>
                     <div class="product-image">
                         <i class="fas fa-gamepad"></i>
                     </div>
                     <h3>Plataforma Bingo Online Completa</h3>
                     <p class="product-price">Desde $450 USD</p>
-                    <p class="product-short">Sistema completo de bingo en vivo con cartones digitales, panel de administración y transmisión en tiempo real.</p>
+                    <p class="product-short">Sistema completo de bingo en vivo con cartones digitales, panel de administracion y transmision en tiempo real.</p>
                     <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
-
-                <!-- Producto 7: Soporte Técnico -->
                 <div class="product-card" onclick="openProductModal(5)">
                     <div class="product-image">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3> Pagina de bingo de venta basica</h3>
+                    <h3>Pagina de Bingo de Venta Basica</h3>
                     <p class="product-price">$200 USD</p>
-                    <p class="product-short">Plataforma web para inscripción y venta de cartones de bingo online.</p>
+                    <p class="product-short">Plataforma web para inscripcion y venta de cartones de bingo online.</p>
                     <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
-              
-              <!-- Producto 3: App Móvil Bingo -->
                 <div class="product-card" onclick="openProductModal(1)">
                     <div class="product-image">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3>Pagina web de bingo automatica completa </h3>
+                    <h3>Pagina Web de Bingo Automatica Completa</h3>
                     <p class="product-price">Desde $950 USD</p>
-                    <p class="product-short">Sistema profesional de bingo automatizado diseñado para operadores que buscan una solución completa.</p>
+                    <p class="product-short">Sistema profesional de bingo automatizado disenado para operadores que buscan una solucion completa.</p>
                     <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
-             
-
-                <!-- Producto 5: Web Personalizada -->
                 <div class="product-card" onclick="openProductModal(2)">
                     <div class="product-image">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <h3>Página Web Personalizada</h3>
+                    <h3>Pagina Web Personalizada</h3>
                     <p class="product-price">Desde $280 USD</p>
-                    <p class="product-short">Diseño web profesional para tu tiendas onliena , optimizada para móviles y con integración de pagos.</p>
+                    <p class="product-short">Diseno web profesional para tu tienda online, optimizada para moviles y con integracion de pagos.</p>
                     <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
-              <!-- Producto 3: App Móvil Bingo -->
                 <div class="product-card" onclick="openProductModal(3)">
                     <div class="product-image">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-file-excel"></i>
                     </div>
-                    <h3>Sistema de Bingo excel </h3>
+                    <h3>Sistema de Bingo Excel</h3>
                     <p class="product-price">Desde $25 USD</p>
-                    <p class="product-short">sistema automatico de excel detecta bingo ganador.</p>
+                    <p class="product-short">Sistema automatico de Excel que detecta el bingo ganador.</p>
                     <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
-
-                <!-- Producto 6: Soporte Técnico -->
                 <div class="product-card" onclick="openProductModal(4)">
                     <div class="product-image">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>Soporte Técnico Mensual</h3>
+                    <h3>Soporte Tecnico Mensual</h3>
                     <p class="product-price">$80 USD/mes</p>
-                    <p class="product-short">Mantenimiento, actualizaciones y soporte técnico 24/7 para tu plataforma de bingo o rifas.</p>
+                    <p class="product-short">Mantenimiento, actualizaciones y soporte tecnico 24/7 para tu plataforma de bingo o rifas.</p>
                     <button class="btn-view">Ver Detalles <i class="fas fa-arrow-right"></i></button>
                 </div>
-              
-               
-
             </div>
         </div>
     </section>
 
-    <!-- Modal de Producto -->
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeProductModal()">&times;</span>
             <div class="modal-body">
                 <div class="modal-info">
-                    <h2 id="modalTitle">Título del Producto</h2>
+                    <h2 id="modalTitle">Titulo del Producto</h2>
                     <p class="modal-price" id="modalPrice">$0 USD</p>
-                    <div class="modal-description" id="modalDescription">
-                        <!-- Descripción dinámica -->
-                    </div>
-
-                    <h4><i class="fas fa-check-circle"></i> Características Principales:</h4>
-                    <ul class="features-list" id="modalFeatures">
-                        <!-- Features dinámicos -->
-                    </ul>
-
+                    <div class="modal-description" id="modalDescription"></div>
+                    <h4><i class="fas fa-check-circle"></i> Caracteristicas Principales</h4>
+                    <ul class="features-list" id="modalFeatures"></ul>
                     <a id="modalWhatsApp" href="#" class="btn-whatsapp-buy" target="_blank" rel="noopener">
                         <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
                     </a>
-                    <p class="whatsapp-note">Te enviaremos toda la información de pago y activación.</p>
+                    <a id="modalCuotas" href="#" class="btn-cuotas" target="_blank" rel="noopener" style="display:none;">
+                        💳 Pagar en cuotas
+                        <span>Inicial de $150 USD de $500</span>
+                    </a>
+                    <p class="whatsapp-note">Te enviaremos toda la informacion de pago y activacion.</p>
                 </div>
-              <a id="modalCuotas" href="#" class="btn-cuotas" target="_blank" rel="noopener">
-    💳 Pagar en cuotas
-    <span>Inicial de $150 USD de $500</span>
-</a>
                 <div class="modal-video">
                     <h4><i class="fas fa-play-circle"></i> Video Demostrativo</h4>
                     <div class="video-container">
@@ -196,109 +560,95 @@ src="https://www.facebook.com/tr?id=1200004005127223&ev=PageView&noscript=1"
         </div>
     </div>
 
-    <!-- Sección Mis Webs -->
     <section id="mis-webs" class="webs">
         <div class="container">
-            <h2>Nuestros Sitios Web</h2>
-            <p class="webs-intro">Explora los diferentes proyectos y servicios que ofrecemos a través de nuestras páginas web especializadas.</p>
+            <div class="section-header">
+                <h2>Nuestros Sitios Web</h2>
+                <p>Explora los diferentes proyectos y servicios que ofrecemos a traves de nuestras paginas web especializadas.</p>
+            </div>
             <div class="webs-grid">
                 <div class="web-card">
                     <h3>Bingo ANDINO 75</h3>
-                    <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
-                    <a href="https://bingoandino75.com/" target="_blank" class="btn-link">Ver Pagina</a>
+                    <p>Plataforma de bingo en linea para Venezuela. Juegos, sorteos y diversion desde cualquier dispositivo.</p>
+                    <a href="https://bingoandino75.com/" target="_blank" class="btn-link">Ver Pagina <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="web-card">
-                  <h3>Bingo La Margariteña</h3>
-                    <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
-                    <a href="https://xn--bingolamargaritea-uxb.com/" target="_blank" class="btn-link">Ver Pagina</a>
+                    <h3>Bingo La Margaritena</h3>
+                    <p>Plataforma de bingo en linea para Venezuela. Juegos, sorteos y diversion desde cualquier dispositivo.</p>
+                    <a href="https://xn--bingolamargaritea-uxb.com/" target="_blank" class="btn-link">Ver Pagina <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="web-card">
                     <h3>Bingo Binblack19</h3>
-                    <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
-                    <a href="https://binblack19.online/" target="_blank" class="btn-link">Ver Pagina</a>
+                    <p>Plataforma de bingo en linea para Venezuela. Juegos, sorteos y diversion desde cualquier dispositivo.</p>
+                    <a href="https://binblack19.online/" target="_blank" class="btn-link">Ver Pagina <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="web-card">
                     <h3>Rifas El Cupon De La Fortuna</h3>
-                    <p>Plataforma de rifas en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
-                    <a href="https://elcupondelafortuna.online/" target="_blank" class="btn-link">Ver Pagina</a>
+                    <p>Plataforma de rifas en linea para Venezuela. Juegos, sorteos y diversion desde cualquier dispositivo.</p>
+                    <a href="https://elcupondelafortuna.online/" target="_blank" class="btn-link">Ver Pagina <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="web-card">
                     <h3>Bingo Digital2024</h3>
-                    <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
-                    <a href="https://www.bingodigital2024.com/" target="_blank" class="btn-link">Ver Pagina</a>
+                    <p>Plataforma de bingo en linea para Venezuela. Juegos, sorteos y diversion desde cualquier dispositivo.</p>
+                    <a href="https://www.bingodigital2024.com/" target="_blank" class="btn-link">Ver Pagina <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="web-card">
                     <h3>Bingo Virtual El Boom</h3>
-                    <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
-                    <a href="https://bingovirtualelboom.com/" target="_blank" class="btn-link">Ver Pagina</a>
+                    <p>Plataforma de bingo en linea para Venezuela. Juegos, sorteos y diversion desde cualquier dispositivo.</p>
+                    <a href="https://bingovirtualelboom.com/" target="_blank" class="btn-link">Ver Pagina <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="web-card">
                     <h3>Bingo Ganga</h3>
-                    <p>Plataforma de bingo en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
-                    <a href="https://www.bingoganga.com/" target="_blank" class="btn-link">Ver Pagina</a>
+                    <p>Plataforma de bingo en linea para Venezuela. Juegos, sorteos y diversion desde cualquier dispositivo.</p>
+                    <a href="https://www.bingoganga.com/" target="_blank" class="btn-link">Ver Pagina <i class="fas fa-external-link-alt"></i></a>
                 </div>
                 <div class="web-card">
-                    <h3>Rifas El Boom </h3>
-                    <p>Plataforma de rifas en línea para Venezuela. Juegos, sorteos y diversión desde cualquier dispositivo.</p>
-                    <a href="https://www.rifaselboom.com/" target="_blank" class="btn-link">Ver Pagina</a>
+                    <h3>Rifas El Boom</h3>
+                    <p>Plataforma de rifas en linea para Venezuela. Juegos, sorteos y diversion desde cualquier dispositivo.</p>
+                    <a href="https://www.rifaselboom.com/" target="_blank" class="btn-link">Ver Pagina <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== NUEVA SECCIÓN: TESTIMONIOS ========== -->
     <section id="testimonios" class="testimonials">
         <div class="container">
-            <h2>Testimonios de Clientes</h2>
-            <p class="testimonials-intro">Lo que nuestros clientes dicen sobre nuestros productos y servicios.</p>
-
+            <div class="section-header">
+                <h2>Testimonios de Clientes</h2>
+                <p>Lo que nuestros clientes dicen sobre nuestros productos y servicios.</p>
+            </div>
             <div class="testimonials-grid">
-
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"La plataforma de bingo que me desarrollaron superó todas mis expectativas. Mis jugadores están encantados con la experiencia digital. Las ventas de cartones aumentaron un 300% en el primer mes."</p>
+                    <p class="testimonial-text">"La plataforma de bingo que me desarrollaron supero todas mis expectativas. Mis jugadores estan encantados con la experiencia digital. Las ventas de cartones aumentaron un 300% en el primer mes."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"><i class="fas fa-user"></i></div>
                         <div class="author-info">
                             <h4>Carlos M.</h4>
-                            <p>Dueño de Bingo Virtual El Boom</p>
+                            <p>Dueno de Bingo Virtual El Boom</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"El sistema de rifas es increíblemente fácil de usar. Puedo gestionar miles de cupones sin problemas y los sorteos automáticos son totalmente transparentes. El soporte técnico siempre responde rápido."</p>
+                    <p class="testimonial-text">"El sistema de rifas es increiblemente facil de usar. Puedo gestionar miles de cupones sin problemas y los sorteos automaticos son totalmente transparentes. El soporte tecnico siempre responde rapido."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"><i class="fas fa-user"></i></div>
                         <div class="author-info">
-                            <h4>María G.</h4>
-                            <p>Fundadora de Rifas El Cupón de la Fortuna</p>
+                            <h4>Maria G.</h4>
+                            <p>Fundadora de Rifas El Cupon de la Fortuna</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     </div>
-                    <p class="testimonial-text">"Golden Pro me creó una página web profesional que me ha ayudado a llegar a muchos más clientes. La integración con WhatsApp para las compras es genial, mis clientes adoran la facilidad."</p>
+                    <p class="testimonial-text">"Golden Pro me creo una pagina web profesional que me ha ayudado a llegar a muchos mas clientes. La integracion con WhatsApp para las compras es genial, mis clientes adoran la facilidad."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"><i class="fas fa-user"></i></div>
                         <div class="author-info">
@@ -307,16 +657,11 @@ src="https://www.facebook.com/tr?id=1200004005127223&ev=PageView&noscript=1"
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"Llevaba años buscando una solución confiable para mi bingo y finalmente la encontré. El sistema es estable, seguro y los jugadores pueden jugar desde cualquier dispositivo. Totalmente recomendado."</p>
+                    <p class="testimonial-text">"Llevaba anos buscando una solucion confiable para mi bingo y finalmente la encontre. El sistema es estable, seguro y los jugadores pueden jugar desde cualquier dispositivo. Totalmente recomendado."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"><i class="fas fa-user"></i></div>
                         <div class="author-info">
@@ -325,16 +670,11 @@ src="https://www.facebook.com/tr?id=1200004005127223&ev=PageView&noscript=1"
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">"El soporte técnico mensual vale cada centavo. Cualquier problema que surge lo resuelven en minutos. Mi negocio nunca ha estado tan bien gestionado como ahora con Golden Pro."</p>
+                    <p class="testimonial-text">"El soporte tecnico mensual vale cada centavo. Cualquier problema que surge lo resuelven en minutos. Mi negocio nunca ha estado tan bien gestionado como ahora con Golden Pro."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"><i class="fas fa-user"></i></div>
                         <div class="author-info">
@@ -343,16 +683,11 @@ src="https://www.facebook.com/tr?id=1200004005127223&ev=PageView&noscript=1"
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     </div>
-                    <p class="testimonial-text">"Desde que implementé el sistema POS para bingo, el proceso de venta de cartones es mucho más rápido. Los códigos QR son una maravilla y los jugadores pueden verificar sus cartones al instante."</p>
+                    <p class="testimonial-text">"Desde que implemente el sistema POS para bingo, el proceso de venta de cartones es mucho mas rapido. Los codigos QR son una maravilla y los jugadores pueden verificar sus cartones al instante."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"><i class="fas fa-user"></i></div>
                         <div class="author-info">
@@ -361,256 +696,240 @@ src="https://www.facebook.com/tr?id=1200004005127223&ev=PageView&noscript=1"
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Sección de Contacto -->
     <section id="contacto" class="contact">
         <div class="container">
-            <h2>Contacto</h2>
-            <p>¿Tienes alguna pregunta? No dudes en ponerte en contacto con nosotros.</p>
-            <div class="contact-info">
-                <p><strong>Email:</strong> goldenpro.ven@gmail.com</p>
-                <div style="margin-top: 2rem;">
-                <a href="https://wa.me/584123714136?text=Hola,%20me%20interesa%20sus%20servicios" 
-                   class="btn" 
-                   target="_blank" 
-                   rel="noopener"
-                   style="background: #25d366; border: none;">
-                   <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+            <div class="section-header">
+                <h2>Contacto</h2>
+                <p>¿Tienes alguna pregunta? No dudes en ponerte en contacto con nosotros.</p>
+            </div>
+            <div class="contact-box">
+                <p><i class="fas fa-envelope" style="color: var(--gold); margin-right: 0.5rem;"></i><strong>Email:</strong> goldenpro.ven@gmail.com</p>
+                <a href="https://wa.me/584123714136?text=Hola,%20me%20interesa%20sus%20servicios" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Escribenos por WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Pie de Página -->
     <footer>
         <div class="container">
             <p>&copy; 2023 Goldenpro.ven & Emprende.vene. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Botón WhatsApp Flotante -->
-    <a href="https://wa.me/584123714136?text=Hola,%20me%20interesa%20sus%20servicios" 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener"
-       title="Escríbenos por WhatsApp">
-       <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/584123714136?text=Hola,%20me%20interesa%20sus%20servicios" class="whatsapp-float" target="_blank" rel="noopener" title="Escribenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- JavaScript para el Modal de Productos -->
     <script>
-        // Datos de los productos
+        // Particulas
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Navbar scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Productos data
         const productsData = [
             {
                 title: "Plataforma Bingo Online Completa",
                 price: "$450 USD",
-                description: "Sistema profesional de bingo en vivo diseñado para operadores que buscan una solución completa y escalable. Incluye panel de administración web, venta de cartones online, transmisión en tiempo real por youtube. Se entrega en 3 dias habiles, despues del pago",
+                description: "Sistema profesional de bingo en vivo disenado para operadores que buscan una solucion completa y escalable. Incluye panel de administracion web, venta de cartones online, transmision en tiempo real por YouTube. Se entrega en 3 dias habiles, despues del pago.",
                 features: [
-                    "Panel de administración completo",
+                    "Panel de administracion completo",
                     "Venta de cartones online con pagos integrados",
-                    "Transmisión en vivo de bolas cantadas",
+                    "Transmision en vivo de bolas cantadas",
                     "Soporte para la sala de juego por 1 mes",
-                    "Reportes de ventas y estadísticas",
-                    "Sistema de premios automáticos",
+                    "Reportes de ventas y estadisticas",
+                    "Sistema de premios automaticos",
                     "Compatible con todos los dispositivos",
-                    "Diseño responsive para móviles",
-                    "Instalación y configuración incluida"                                              
+                    "Diseno responsive para moviles",
+                    "Instalacion y configuracion incluida"
                 ],
-              
-               bonus: [
+                bonus: [
                     "1 mes de soporte gratis",
-                    "1 año de dominio gratis",
-                    "Sistema de bingo Excel detecta ganador automáticamente"
-    ],
+                    "1 ano de dominio gratis",
+                    "Sistema de bingo Excel detecta ganador automaticamente"
+                ],
                 video: "https://streamable.com/e/kb11r5",
                 whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20Plataforma%20Bingo%20Online%20Completa%20por%20$450%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             },
-            
             {
-                title: "pagina web de Bingo automatica completa",
+                title: "Pagina Web de Bingo Automatica Completa",
                 price: "$950 USD",
-                description: "Sistema profesional de bingo automatizado diseñado para operadores que buscan una solución completa, segura y escalable. Incluye panel de administración web, venta de cartones online con verificación de pagos, sala de juego en tiempo real con marcado automático y detección de ganadores. Se entrega listo para operar en 5 días hábiles después del pago.",
+                description: "Sistema profesional de bingo automatizado disenado para operadores que buscan una solucion completa, segura y escalable. Incluye panel de administracion web, venta de cartones online con verificacion de pagos, sala de juego en tiempo real con marcado automatico y deteccion de ganadores. Se entrega listo para operar en 5 dias habiles despues del pago.",
                 features: [
                     "Login seguro para administradores",
-"Control total del juego: iniciar, sacar bolas, modo automático, finalizar",
-"Visualización de bola actual con animaciones",
-"Contador de jugadores en sala en tiempo real",
-"Gestión de compras pendientes con aprobación/rechazo",
-"Creación y gestión de promociones de cartones"
+                    "Control total del juego: iniciar, sacar bolas, modo automatico, finalizar",
+                    "Visualizacion de bola actual con animaciones",
+                    "Contador de jugadores en sala en tiempo real",
+                    "Gestion de compras pendientes con aprobacion/rechazo",
+                    "Creacion y gestion de promociones de cartones"
                 ],
                 video: "https://streamable.com/e/s9jvpg",
                 whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20pagina%20web%20de%20Bingo%20automatica%20completa%20por%20$950%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             },
             {
-                title: "Pagina personalizada",
+                title: "Pagina Personalizada",
                 price: "$280 USD",
-                description: "Plataforma web para ferreterías y tiendas de construcción. Permite explorar productos, gestionar carrito de compras, visualizar detalles técnicos y realizar compras online con soporte multimoneda USD/VES.",
-features: [
-    "Catálogo interactivo de productos",
-    "Carrito de compras dinámico",
-    "Cambio de moneda USD / VES",
-    "Actualización manual de tasa de cambio",
-    "Filtros por categorías y ofertas",
-    "Buscador de productos en tiempo real",
-    "Vista detallada de productos con especificaciones",
-    "Sistema de reseñas y calificaciones",
-    "Control visual de stock disponible",
-    "Diseño responsive para móviles y escritorio",
-    "Animaciones e interfaz moderna",
-    "Gestión de cantidades en carrito",
-    "Persistencia de preferencias con localStorage",
-    "Modal interactivo para detalles del producto",
-    "Notificaciones visuales de acciones"
-],
+                description: "Plataforma web para ferreterias y tiendas de construccion. Permite explorar productos, gestionar carrito de compras, visualizar detalles tecnicos y realizar compras online con soporte multimoneda USD/VES.",
+                features: [
+                    "Catalogo interactivo de productos",
+                    "Carrito de compras dinamico",
+                    "Cambio de moneda USD / VES",
+                    "Actualizacion manual de tasa de cambio",
+                    "Filtros por categorias y ofertas",
+                    "Buscador de productos en tiempo real",
+                    "Vista detallada de productos con especificaciones",
+                    "Sistema de resenas y calificaciones",
+                    "Control visual de stock disponible",
+                    "Diseno responsive para moviles y escritorio",
+                    "Animaciones e interfaz moderna",
+                    "Gestion de cantidades en carrito",
+                    "Persistencia de preferencias con localStorage",
+                    "Modal interactivo para detalles del producto",
+                    "Notificaciones visuales de acciones"
+                ],
                 video: "https://streamable.com/e/fi281d",
-                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20pagina%20web%20persoalizada%20por%20$280%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20la%20pagina%20web%20personalizada%20por%20$280%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             },
             {
-                title: "sistema de bingo excel",
+                title: "Sistema de Bingo Excel",
                 price: "$25 USD",
-                description: "sistema de excel automatico y manual.",
+                description: "Sistema de Excel automatico y manual.",
                 features: [
-                    "Impresión de cartillas",
+                    "Impresion de cartillas",
                     "Cantar bingo",
                     "Silenciar audios",
                     "Pantalla de juegos",
-                    "Verificación de cartillas",
+                    "Verificacion de cartillas",
                     "Generador de cartillas",
-                    "Detecta el ganador automáticamente",
+                    "Detecta el ganador automaticamente",
                     "Requisitos del sistema:",
-                    "Sistema operativo: Windows 10, o 11 (recomendado Windows 10 y 11)",
+                    "Sistema operativo: Windows 10 o 11",
                     "Memoria RAM: 4 GB",
-                    "Resolución de pantalla: 1366 x 768",
-                    "Almacenamiento: 250 Gb"
+                    "Resolucion de pantalla: 1366 x 768",
+                    "Almacenamiento: 250 GB"
                 ],
                 video: "https://streamable.com/e/qw3w4m",
-                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20el%20sistema%20de%20bingo%excel%20por%20$25%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20el%20sistema%20de%20bingo%20excel%20por%20$25%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             },
             {
-                title: "Soporte Técnico Mensual",
+                title: "Soporte Tecnico Mensual",
                 price: "$80 USD/mes",
-                description: "Plan de soporte técnico premium que incluye mantenimiento preventivo, actualizaciones de seguridad, respaldo diario de datos, atención 24/7 y desarrollo de nuevas funcionalidades bajo demanda.",
+                description: "Plan de soporte tecnico premium que incluye mantenimiento preventivo, actualizaciones de seguridad, respaldo diario de datos, atencion 24/7 y desarrollo de nuevas funcionalidades bajo demanda.",
                 features: [
-                    "Soporte técnico 24/7",
+                    "Soporte tecnico 24/7",
                     "Actualizaciones de seguridad",
-                    "Respaldo diario automático",
+                    "Respaldo diario automatico",
                     "Monitoreo de servidor",
-                    "Corrección de bugs sin costo extra",
+                    "Correccion de bugs sin costo extra",
                     "1 hora de desarrollo mensual",
                     "Reporte mensual de rendimiento",
-                    "Asesoría técnica personalizada"
+                    "Asesoria tecnica personalizada"
                 ],
-               video: "",
-                whatsappMsg: "Hola,%20estoy%20interesado%20en%20contratar%20el%20Soporte%20Técnico%20Mensual%20por%20$80%20USD/mes.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+                video: "",
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20contratar%20el%20Soporte%20Tecnico%20Mensual%20por%20$80%20USD/mes.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             },
             {
-                title: "Pagina de bingo de venta basica",
+                title: "Pagina de Bingo de Venta Basica",
                 price: "$200 USD",
-               description: "Plataforma web para inscripción y venta de cartones de bingo online. Permite registrar jugadores, seleccionar cartones disponibles, cargar comprobantes de pago, guardar inscripciones en Supabase y enviar los datos por WhatsApp.",
-features: [
-    "Formulario de inscripción de jugadores",
-    "Selección de cartones de bingo",
-    "Control de cartones ocupados",
-    "Selección automática del día actual",
-    "Cálculo automático del total a pagar",
-    "Carga de comprobantes de pago",
-    "Envío de inscripción por WhatsApp",
-    "Panel de administrador",
-    "Inicio de sesión para administradores",
-    "Conteo de cartones vendidos",
-    "Conteo de clientes inscritos",
-    "Visualización de comprobantes",
-    "Almacenamiento en Supabase",
-    "Sincronización en tiempo real de inscripciones",
-    "Diseño responsive para móviles"
-],
+                description: "Plataforma web para inscripcion y venta de cartones de bingo online. Permite registrar jugadores, seleccionar cartones disponibles, cargar comprobantes de pago, guardar inscripciones en Supabase y enviar los datos por WhatsApp.",
+                features: [
+                    "Formulario de inscripcion de jugadores",
+                    "Seleccion de cartones de bingo",
+                    "Control de cartones ocupados",
+                    "Seleccion automatica del dia actual",
+                    "Calculo automatico del total a pagar",
+                    "Carga de comprobantes de pago",
+                    "Envio de inscripcion por WhatsApp",
+                    "Panel de administrador",
+                    "Inicio de sesion para administradores",
+                    "Conteo de cartones vendidos",
+                    "Conteo de clientes inscritos",
+                    "Visualizacion de comprobantes",
+                    "Almacenamiento en Supabase",
+                    "Sincronizacion en tiempo real de inscripciones",
+                    "Diseno responsive para moviles"
+                ],
                 video: "https://streamable.com/e/vvy50j",
-                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20el%20Sbingo%20basico%20por%20$200%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
+                whatsappMsg: "Hola,%20estoy%20interesado%20en%20comprar%20el%20bingo%20basico%20por%20$200%20USD.%20¿Podemos%20hablar%20sobre%20los%20detalles?"
             }
         ];
 
-        // Función para abrir el modal
         function openProductModal(index) {
             const product = productsData[index];
             const modal = document.getElementById('productModal');
 
             document.getElementById('modalTitle').textContent = product.title;
             document.getElementById('modalPrice').textContent = product.price;
-            document.getElementById('modalDescription').innerHTML = `<p>${product.description}</p>`;
+            document.getElementById('modalDescription').innerHTML = '<p>' + product.description + '</p>';
 
-            // Generar lista de features
             const featuresList = document.getElementById('modalFeatures');
             featuresList.innerHTML = '';
             product.features.forEach(feature => {
                 const li = document.createElement('li');
-                li.innerHTML = `<i class="fas fa-check"></i> ${feature}`;
-                featuresList.appendChild(li);      
+                li.innerHTML = '<i class="fas fa-check"></i> ' + feature;
+                featuresList.appendChild(li);
             });
-          if (product.bonus) {
 
-    const bonusDiv = document.createElement('div');
+            if (product.bonus) {
+                const bonusDiv = document.createElement('div');
+                bonusDiv.className = 'bonus-box';
+                bonusDiv.innerHTML = '<h4>🎁 Te obsequiamos</h4><ul>' + 
+                    product.bonus.map(item => '<li>' + item + '</li>').join('') + '</ul>';
+                document.getElementById('modalDescription').appendChild(bonusDiv);
+            }
 
-    bonusDiv.className = 'bonus-box';
-
-    bonusDiv.innerHTML = `
-        <h4>🎁 Te obsequiamos</h4>
-
-        <ul>
-            ${product.bonus.map(item => `
-                <li>${item}</li>
-            `).join('')}
-        </ul>
-    `;
-
-    document.getElementById('modalDescription')
-        .appendChild(bonusDiv);
-}
-
-            // Configurar video
             const videoContainer = document.querySelector('.modal-video');
+            if (product.video) {
+                videoContainer.style.display = 'block';
+                document.getElementById('modalVideo').src = product.video;
+            } else {
+                videoContainer.style.display = 'none';
+                document.getElementById('modalVideo').src = '';
+            }
 
-if(product.video){
-
-    videoContainer.style.display = 'block';
-
-    document.getElementById('modalVideo').src = product.video;
-
-}else{
-
-    videoContainer.style.display = 'none';
-
-    document.getElementById('modalVideo').src = '';
-}
-
-            // Configurar botón de WhatsApp con mensaje predefinido
-            const whatsappLink = `https://wa.me/584123714136?text=${product.whatsappMsg}`;
+            const whatsappLink = 'https://wa.me/584123714136?text=' + product.whatsappMsg;
             document.getElementById('modalWhatsApp').href = whatsappLink;
-          const cuotasBtn = document.getElementById('modalCuotas');
 
-if(index === 0){
-
-    cuotasBtn.style.display = 'flex';
-
-    const cuotasLink =
-    `https://wa.me/584123714136?text=Hola,%20quiero%20comprar%20${product.title}%20pagando%20en%20cuotas%20con%20$150%20USD%20de%20inicial%20pagaria%20$500%20USD%20en%20total%20al%20BCV.`;
-
-    cuotasBtn.href = cuotasLink;
-
-}else{
-
-    cuotasBtn.style.display = 'none';
-}
-          
+            const cuotasBtn = document.getElementById('modalCuotas');
+            if (index === 0) {
+                cuotasBtn.style.display = 'flex';
+                const cuotasLink = 'https://wa.me/584123714136?text=Hola,%20quiero%20comprar%20' + encodeURIComponent(product.title) + '%20pagando%20en%20cuotas%20con%20$150%20USD%20de%20inicial%20pagaria%20$500%20USD%20en%20total%20al%20BCV.';
+                cuotasBtn.href = cuotasLink;
+            } else {
+                cuotasBtn.style.display = 'none';
+            }
 
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
         }
 
-        // Función para cerrar el modal
         function closeProductModal() {
             const modal = document.getElementById('productModal');
             modal.style.display = 'none';
@@ -618,7 +937,6 @@ if(index === 0){
             document.body.style.overflow = 'auto';
         }
 
-        // Cerrar modal al hacer clic fuera del contenido
         window.onclick = function(event) {
             const modal = document.getElementById('productModal');
             if (event.target === modal) {
@@ -626,13 +944,11 @@ if(index === 0){
             }
         }
 
-        // Cerrar modal con la tecla Escape
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeProductModal();
             }
         });
     </script>
-
 </body>
 </html>
